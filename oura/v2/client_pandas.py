@@ -89,6 +89,10 @@ class OuraClientDataFrameV2(OuraClientV2):
     def workouts_df(self, start=None, end=None, metrics=None):
         workouts = super().workouts(start, end)["data"]
         return to_pandas(workouts, metrics, date_key="day")
+    
+    def resilience_df(self, start=None, end=None, metrics=None):
+        resilience = super().resilience(start, end)["data"]
+        return to_pandas(resilience, metrics, date_key="day")
 
     def sleep_df(self, start=None, end=None, metrics=None):
         raise NotImplementedError

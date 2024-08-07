@@ -10,7 +10,7 @@ class OuraOAuth2Client:
 
     AUTHORIZE_BASE_URL = "https://cloud.ouraring.com/oauth/authorize"
     TOKEN_BASE_URL = "https://api.ouraring.com/oauth/token"
-    SCOPE = ["email", "personal", "daily", "heartrate", "workout", "tag", "session"]
+    SCOPE = ["email", "personal", "daily", "heartrate", "workout", "tag", "session", "resilience"]
 
     def __init__(self, client_id, client_secret):
         """

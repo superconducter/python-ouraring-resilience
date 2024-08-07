@@ -89,6 +89,9 @@ class OuraClientV2:
 
     def workouts(self, start_date=None, end_date=None, next_token=None):
         return self._get_summary(start_date, end_date, next_token, "workout")
+    
+    def resilience(self, start_date=None, end_date=None, next_token=None):
+        return self._get_summary(start_date, end_date, next_token, "daily_resilience")
 
     def _get_summary(self, start_date, end_date, next_token, summary_type):
         url = self._build_summary_url(start_date, end_date, next_token, summary_type)
